@@ -1,0 +1,13 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+
+// general styling
+@import './styles/variables';
+@import './styles/mixins';
+@import './styles/type';
+@import './styles/structure';
+
+// page level styling
+@import './pages/About/about';
+
+// component level styling
+@import './components/Navbar/navbar';
