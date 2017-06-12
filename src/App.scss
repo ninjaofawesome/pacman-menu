@@ -7,7 +7,9 @@
 @import './styles/structure';
 
 // page level styling
+@import './pages/Home/home';
 @import './pages/About/about';
+@import './pages/NotFound/notfound';
 
 // component level styling
 @import './components/Navbar/navbar';
