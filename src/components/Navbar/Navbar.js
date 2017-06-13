@@ -13,11 +13,6 @@ class Navbar extends Component {
             <li className="navbar__route-item">
               <Link className="navbar__route-link" to="/about">About</Link>
             </li>
-            {/* currently does not work
-            <li className="navbar__route-item">
-              <Link className="navbar__route-link" to="/pacman">Surprise Me</Link>
-            </li>
-            */}
           </ul>
         </div>
       </div>
