@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Route } from 'react-router';
 import Home from '../Home/Home';
 import About from '../About/About';
-import NotFound from '../NotFound/NotFound';
+// import NotFound from '../NotFound/NotFound';
 import Navbar from '../../components/Navbar/Navbar';
 
+// todo:  Come up with a 404 route
 class App extends Component {
   render() {
     return (
@@ -13,7 +14,6 @@ class App extends Component {
         <div class="body-content">
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="*" component={NotFound} />
         </div>
       </div>
     );
