@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router';
+import { Route } from 'react-router';
 import Home from '../Home/Home';
 import About from '../About/About';
 import NotFound from '../NotFound/NotFound';
@@ -11,11 +11,9 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <div class="body-content">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="*" component={NotFound} />
-          </Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="*" component={NotFound} />
         </div>
       </div>
     );
