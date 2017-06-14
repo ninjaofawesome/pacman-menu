@@ -1,0 +1,15 @@
+@mixin ArialFlex($size: rem-calc(16), $color: $black) {
+  font-family: $arial;
+  font-size: $size;
+  line-height: calc(#{$size}* 1.05);
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin CourierFlex($size: rem-calc(16), $color: $black) {
+  font-family: $courier;
+  font-size: $size;
+  line-height: calc(#{$size}* 1.05);
+  font-weight: 400;
+  color: $color;
+}

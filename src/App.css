@@ -4,3 +4,68 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+html,
+body {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #fff;
+  color: #141414; }
+
+.body-content {
+  margin-top: 3.125rem;
+  border: 1px solid red; }
+
+.navbar {
+  width: 100%;
+  height: 3.125rem;
+  background-color: #424242;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .navbar__menu-button {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.5625rem;
+    line-height: calc(1.5625rem* 1.05);
+    font-weight: 400;
+    color: #fff;
+    border: 0;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    margin-left: 0.3125rem;
+    display: inline; }
+    .navbar__menu-button:focus {
+      outline: 0; }
+  .navbar__navbar-logo {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 2.8125rem;
+    line-height: calc(2.8125rem* 1.05);
+    font-weight: 400;
+    color: #fff;
+    display: inline; }
+
+.hide-list {
+  opacity: 0;
+  -webkit-transition: all 350ms ease-in-out;
+  -moz-transition: all 350ms ease-in-out;
+  -ms-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out; }
+
+.show-list {
+  opacity: 1;
+  -webkit-transition: all 350ms ease-in-out;
+  -moz-transition: all 350ms ease-in-out;
+  -ms-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out; }

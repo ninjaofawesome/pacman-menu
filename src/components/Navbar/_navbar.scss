@@ -1,0 +1,42 @@
+.navbar {
+  width: 100%;
+  height: rem-calc(50);
+  background-color: $charcoal;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &__menu-button {
+    @include ArialFlex(rem-calc(25), $white);
+
+    border: 0;
+    background-color: transparent;
+    height: 50px;
+    width: auto;
+    margin-left: rem-calc(5);
+    display: inline;
+
+    &:focus{
+      outline: 0;
+    }
+  }
+
+  &__navbar-logo {
+    @include CourierFlex(rem-calc(45), $white);
+
+    display: inline;
+
+  }
+
+}
+
+.hide-list {
+  @include opacity(0, 350ms);
+}
+
+.show-list {
+  @include opacity(1, 350ms);
+}
