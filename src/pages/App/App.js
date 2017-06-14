@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router';
+import { Route, Redirect } from 'react-router';
 import Home from '../Home/Home';
 import About from '../About/About';
 import NotFound from '../NotFound/NotFound';
 import Navbar from '../../components/Navbar/Navbar';
 
+// todo:  Come up with a 404 route better than a redirect
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Navbar />
         <div class="body-content">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="*" component={NotFound} />
-          </Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Redirect to="/" />
         </div>
       </div>
     );
