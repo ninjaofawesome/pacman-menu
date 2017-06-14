@@ -1,23 +1,30 @@
 .navbar {
-  width: 100%;
-  height: rem-calc(50);
-  background-color: $charcoal;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
+
+
+
+  &__container {
+    @include flex-grid-row();
+    max-width: 100%;
+    background-color: $charcoal;
+    width: 100%;
+    height: rem-calc(50);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
 
   &__menu-button {
+    @include flex-grid-column(1);
     @include ArialFlex(rem-calc(25), $white);
 
     border: 0;
     background-color: transparent;
     height: 50px;
-    width: auto;
-    margin-left: rem-calc(5);
     display: inline;
+    text-align: left;
 
     &:focus{
       outline: 0;
@@ -25,10 +32,37 @@
   }
 
   &__navbar-logo {
+    @include flex-grid-column(10);
+
     @include CourierFlex(rem-calc(45), $white);
 
-    display: inline;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+  }
 
+  &__route-list {
+    z-index: 10;
+    width: rem-calc(200);
+    background-color: $white;
+    list-style-type: none;
+    position: absolute;
+    top: rem-calc(50);
+    padding: 0;
+    margin: 0;
+    border-right: rem-calc(2) solid $border-gray;
+  }
+
+  &__route-item {
+    height: rem-calc(50);
+    border-bottom: rem-calc(2) solid $border-gray;
+    text-align: center;
+  }
+
+  &__route-link {
+    @include ArialFlex(rem-calc(25));
+    line-height: rem-calc(50);
+    text-decoration: none;
   }
 
 }

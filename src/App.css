@@ -20,39 +20,91 @@ body {
 
 .body-content {
   margin-top: 3.125rem;
-  border: 1px solid red; }
+  z-index: 0; }
 
-.navbar {
+.navbar__container {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 100%;
+  background-color: #424242;
   width: 100%;
   height: 3.125rem;
-  background-color: #424242;
   margin: 0;
   padding: 0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10; }
-  .navbar__menu-button {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.5625rem;
-    line-height: calc(1.5625rem* 1.05);
-    font-weight: 400;
-    color: #fff;
-    border: 0;
-    background-color: transparent;
-    height: 50px;
-    width: auto;
-    margin-left: 0.3125rem;
-    display: inline; }
-    .navbar__menu-button:focus {
-      outline: 0; }
-  .navbar__navbar-logo {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    font-size: 2.8125rem;
-    line-height: calc(2.8125rem* 1.05);
-    font-weight: 400;
-    color: #fff;
-    display: inline; }
+
+.navbar__menu-button {
+  flex: 0 0 8.33333%;
+  max-width: 8.33333%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 8.33333%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.5625rem;
+  line-height: calc(1.5625rem* 1.05);
+  font-weight: 400;
+  color: #fff;
+  border: 0;
+  background-color: transparent;
+  height: 50px;
+  display: inline;
+  text-align: left; }
+  @media print, screen and (min-width: 40em) {
+    .navbar__menu-button {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .navbar__menu-button:focus {
+    outline: 0; }
+
+.navbar__navbar-logo {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 83.33333%;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 2.8125rem;
+  line-height: calc(2.8125rem* 1.05);
+  font-weight: 400;
+  color: #fff;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center; }
+  @media print, screen and (min-width: 40em) {
+    .navbar__navbar-logo {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+
+.navbar__route-list {
+  z-index: 10;
+  width: 12.5rem;
+  background-color: #fff;
+  list-style-type: none;
+  position: absolute;
+  top: 3.125rem;
+  padding: 0;
+  margin: 0;
+  border-right: 0.125rem solid #e7e7e7; }
+
+.navbar__route-item {
+  height: 3.125rem;
+  border-bottom: 0.125rem solid #e7e7e7;
+  text-align: center; }
+
+.navbar__route-link {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.5625rem;
+  line-height: calc(1.5625rem* 1.05);
+  font-weight: 400;
+  color: #141414;
+  line-height: 3.125rem;
+  text-decoration: none; }
 
 .hide-list {
   opacity: 0;

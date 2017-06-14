@@ -19,11 +19,13 @@ class Navbar extends Component {
   render() {
     return(
       <div className="navbar">
-        <button
-          className="navbar__menu-button"
-          onClick={this.toggleHidden}
-        >menu</button>
-        <h1 className="navbar__navbar-logo">PacMan</h1>
+        <div className="navbar__container">
+          <button
+            className="navbar__menu-button"
+            onClick={this.toggleHidden}
+          >menu</button>
+          <h1 className="navbar__navbar-logo">PacMan</h1>
+        </div>
         <ul className={`navbar__route-list ${this.state.isHidden ? 'hide-list' : 'show-list'}`}>
           <li className="navbar__route-item">
             <Link className="navbar__route-link" to="/">Home</Link>
