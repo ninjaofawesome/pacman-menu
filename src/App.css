@@ -61,6 +61,8 @@ body {
       padding-left: 0.9375rem; } }
   .navbar__menu-button:focus {
     outline: 0; }
+  .navbar__menu-button:visited {
+    color: #fff; }
 
 .navbar__navbar-logo {
   flex: 0 0 83.33333%;
@@ -88,6 +90,7 @@ body {
   list-style-type: none;
   position: absolute;
   top: 3.125rem;
+  left: 0;
   padding: 0;
   margin: 0;
   border-right: 0.125rem solid #e7e7e7; }
@@ -121,3 +124,16 @@ body {
   -ms-transition: all 350ms ease-in-out;
   -o-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out; }
+
+@media screen and (max-width: 63.9375em) {
+  .navbar__navbar-logo {
+    padding: 0;
+    margin: 0; } }
+
+@media screen and (max-width: 39.9375em) {
+  .navbar__menu-button {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.25rem;
+    line-height: calc(1.25rem* 1.05);
+    font-weight: 400;
+    color: #fff; } }

@@ -1,7 +1,5 @@
 .navbar {
 
-
-
   &__container {
     @include flex-grid-row();
     max-width: 100%;
@@ -29,6 +27,10 @@
     &:focus{
       outline: 0;
     }
+
+    &:visited {
+      color: $white;
+    }
   }
 
   &__navbar-logo {
@@ -48,6 +50,7 @@
     list-style-type: none;
     position: absolute;
     top: rem-calc(50);
+    left: 0;
     padding: 0;
     margin: 0;
     border-right: rem-calc(2) solid $border-gray;
@@ -74,3 +77,25 @@
 .show-list {
   @include opacity(1, 350ms);
 }
+
+@include breakpoint(medium down) {
+  .navbar {
+
+    &__navbar-logo {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+}
+
+@include breakpoint(small only) {
+
+  .navbar {
+    &__menu-button {
+      @include ArialFlex(rem-calc(20), $white);
+    }
+  }
+
+}
+
