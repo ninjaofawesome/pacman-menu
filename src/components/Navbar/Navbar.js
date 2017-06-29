@@ -28,10 +28,18 @@ class Navbar extends Component {
         </div>
         <ul className={`navbar__route-list ${this.state.isHidden ? 'hide-list' : 'show-list'}`}>
           <li className="navbar__route-item">
-            <Link className="navbar__route-link" to="/">Home</Link>
+            <Link
+              className={`navbar__route-link ${this.state.isHidden ? 'hide-list' : 'show-list'}`}
+              to="/"
+              onClick={this.toggleHidden}
+              >Home</Link>
           </li>
           <li className="navbar__route-item">
-            <Link className="navbar__route-link" to="/about">About</Link>
+            <Link
+              className={`navbar__route-link ${this.state.isHidden ? 'hide-list' : 'show-list'}`}
+              to="/about"
+              onClick={this.toggleHidden}
+              >About</Link>
           </li>
         </ul>
       </div>
