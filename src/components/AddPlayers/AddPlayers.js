@@ -1,14 +1,15 @@
 import React from 'react';
+import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux';
 import { addPlayer } from '../../actions/pacman_actions';
 
-let Players = ({ dispatch }) => {
-  let input
+let AddPlayers = ({ dispatch, pacman }) => {
+  let input;
 
   return(
-    <div className="players">
+    <div className="players-form">
       <form
-        className="players__input-form"
+        className="players-form__input-form"
         onSubmit={e => {
           e.preventDefault()
           if(!input.value.trim()) {
@@ -26,14 +27,35 @@ let Players = ({ dispatch }) => {
         />
         <button
           type="submit"
-          className="players__input-button">
+          className="players-form__input-button">
           Add Player
         </button>
       </form>
+      <ul>
+        {pacman.map((player) => {
+          return(
+            <li key={player.id}>Player {player.id}: {player.name}</li>
+          );
+        })}
+      </ul>
+
     </div>
   );
 }
 
-Players = connect()(Players)
+const mapStateToProps = (state) => {
+  return {
+    pacman: state.pacman
+  }
+}
 
-export default Players;
+AddPlayers.propTypes = {
+  pacman: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    id: PropTypes.number
+  }))
+}
+
+AddPlayers = connect(mapStateToProps)(AddPlayers)
+
+export default AddPlayers;

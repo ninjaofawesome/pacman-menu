@@ -1,4 +1,4 @@
-let playerId = 0
+let playerId = 1
 
 export const addPlayer = (name) => {
   return {

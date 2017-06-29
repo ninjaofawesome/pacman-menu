@@ -1,0 +1,7 @@
+.hide-list {
+  @include opacity(0, 350ms);
+}
+
+.show-list {
+  @include opacity(1, 350ms);
+}
