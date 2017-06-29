@@ -5,7 +5,7 @@ class Home extends Component {
   render() {
     return(
       <div className="home">
-        <h1>I am home!</h1>
+        <h2 className="home__title">Welcome to PacMan</h2>
         <Players />
       </div>
     );

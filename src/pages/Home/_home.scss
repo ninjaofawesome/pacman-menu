@@ -1,0 +1,7 @@
+.home {
+  @include flex-grid-column(12);
+
+  &__title {
+    text-align: center;
+  }
+}

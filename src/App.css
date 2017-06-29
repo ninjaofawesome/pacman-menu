@@ -19,8 +19,37 @@ body {
   color: #141414; }
 
 .body-content {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row wrap;
   margin-top: 3.125rem;
   z-index: 0; }
+
+.home {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 100%; }
+  @media print, screen and (min-width: 40em) {
+    .home {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .home__title {
+    text-align: center; }
+
+.about {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 100%; }
+  @media print, screen and (min-width: 40em) {
+    .about {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
 
 .navbar__container {
   max-width: 75rem;
