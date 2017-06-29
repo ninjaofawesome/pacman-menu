@@ -25,7 +25,7 @@ class Players extends Component {
           <button
             className="players__play-button"
             onClick={this.toggleHidden}
-            >Start</button>
+            >Start Game</button>
         </div>
       </div>
     );
