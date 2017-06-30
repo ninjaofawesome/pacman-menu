@@ -21,6 +21,7 @@ let AddPlayers = ({ dispatch, pacman }) => {
         }}
       >
         <input
+          className="players-form__input"
           ref={node => {
             input = node
           }}
@@ -31,10 +32,13 @@ let AddPlayers = ({ dispatch, pacman }) => {
           Add Player
         </button>
       </form>
-      <ul>
+      <ul className="players-form__player-list">
         {pacman.map((player) => {
           return(
-            <li key={player.id}>Player {player.id}: {player.name}</li>
+            <li
+            className="players-form__player"
+            key={player.id}
+            >Player {player.id}: {player.name}</li>
           );
         })}
       </ul>
@@ -45,7 +49,7 @@ let AddPlayers = ({ dispatch, pacman }) => {
 
 const mapStateToProps = (state) => {
   return {
-    pacman: state.pacman
+    pacman: state.pacman || {}
   }
 }
 

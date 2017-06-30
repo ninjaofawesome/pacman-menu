@@ -1,3 +1,8 @@
+@mixin max-width-row(){
+  @include flex-grid-row();
+  max-width: 100%;
+}
+
 @mixin link-transition($time){
   -webkit-transition: all $time ease-out;
   -moz-transition: all $time ease-out;

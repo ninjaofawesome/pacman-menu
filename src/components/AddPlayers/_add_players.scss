@@ -1,0 +1,69 @@
+.players-form {
+  @include flex-grid-column(6, 0);
+
+  display: block;
+  margin: 0 auto;
+
+  &__input-form {
+    position: relative;
+  }
+
+  &__input {
+    @include CourierFlexBold(rem-calc(20), $charcoal);
+
+    width: calc(100% - 81px);
+    height: rem-calc(40);
+    border: 0;
+
+    &:focus {
+      outline: 0;
+      outline-width: 0;
+    }
+  }
+
+  &__input-button {
+    @include CourierFlex(rem-calc(14), $white);
+
+    width: rem-calc(75);
+    height: rem-calc(42.5);
+    font-weight: 700;
+    background-color: $red;
+    color: $white;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+
+    &:focus {
+      outline: 0;
+      outline-width: 0;
+    }
+  }
+
+  &__player-list {
+    @include CourierFlexBold(rem-calc(20), $lt-gray);
+
+    list-style: none;
+  }
+
+  &__player {
+    margin-top: rem-calc(10);
+    text-transform: capitalize;
+  }
+}
+
+@include breakpoint(medium down) {
+
+  @include breakpoint(landscape only) {
+    .players-form {
+      @include flex-grid-column(12);
+    }
+  }
+
+}
+
+@include breakpoint(small only) {
+  .players-form {
+    @include flex-grid-column(12);
+  }
+}

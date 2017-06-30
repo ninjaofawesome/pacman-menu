@@ -21,6 +21,7 @@ class Players extends Component {
     return(
       <div className="players">
         <div className={`players__wrapper ${this.state.isHidden ? 'hide-list' : 'show-list'}`}>
+          <h2 className="players__title">Add Players</h2>
           <AddPlayers  />
           <button
             className="players__play-button"
