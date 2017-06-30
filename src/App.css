@@ -6,6 +6,9 @@
  */
 html,
 body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;
@@ -19,8 +22,39 @@ body {
   color: #141414; }
 
 .body-content {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 100%;
   margin-top: 3.125rem;
   z-index: 0; }
+
+.home {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 100%;
+  background: #141414;
+  height: 100vh;
+  padding: 0; }
+  @media print, screen and (min-width: 40em) {
+    .home {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+
+.about {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 100%; }
+  @media print, screen and (min-width: 40em) {
+    .about {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
 
 .navbar__container {
   max-width: 75rem;
@@ -137,3 +171,138 @@ body {
     line-height: calc(1.25rem* 1.05);
     font-weight: 400;
     color: #fff; } }
+
+.players {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 83.33333%;
+  display: block;
+  margin: 0 auto; }
+  @media print, screen and (min-width: 40em) {
+    .players {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .players__title {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 1.875rem;
+    line-height: calc(1.875rem* 1.05);
+    font-weight: 400;
+    color: #a1a1a1;
+    text-align: center;
+    font-weight: 700; }
+  .players__play-button {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 1.25rem;
+    line-height: calc(1.25rem* 1.05);
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff0000;
+    border: 0;
+    display: block;
+    margin: 0 auto;
+    padding: 0.625rem; }
+
+.hide-list {
+  opacity: 0;
+  -webkit-transition: all 350ms ease-in-out;
+  -moz-transition: all 350ms ease-in-out;
+  -ms-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out; }
+
+.show-list {
+  opacity: 1;
+  -webkit-transition: all 350ms ease-in-out;
+  -moz-transition: all 350ms ease-in-out;
+  -ms-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out; }
+
+@media screen and (max-width: 63.9375em) {
+  .players {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    max-width: 100%; } }
+  @media screen and (max-width: 63.9375em) and (min-width: 40em) {
+    .players {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+
+.players-form {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 0;
+  padding-left: 0;
+  max-width: 50%;
+  display: block;
+  margin: 0 auto; }
+  .players-form__input-form {
+    position: relative; }
+  .players-form__input {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 1.25rem;
+    line-height: calc(1.25rem* 1.05);
+    font-weight: 700;
+    color: #424242;
+    width: calc(100% - 81px);
+    height: 2.5rem;
+    border: 0; }
+    .players-form__input:focus {
+      outline: 0;
+      outline-width: 0; }
+  .players-form__input-button {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 0.875rem;
+    line-height: calc(0.875rem* 1.05);
+    font-weight: 400;
+    color: #fff;
+    width: 4.6875rem;
+    height: 2.65625rem;
+    font-weight: 700;
+    background-color: #ff0000;
+    color: #fff;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top: 0; }
+    .players-form__input-button:focus {
+      outline: 0;
+      outline-width: 0; }
+  .players-form__player-list {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 1.25rem;
+    line-height: calc(1.25rem* 1.05);
+    font-weight: 700;
+    color: #a1a1a1;
+    list-style: none; }
+  .players-form__player {
+    margin-top: 0.625rem;
+    text-transform: capitalize; }
+
+@media screen and (max-width: 63.9375em) and (orientation: landscape) {
+  .players-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    max-width: 100%; } }
+  @media screen and (max-width: 63.9375em) and (orientation: landscape) and (min-width: 40em) {
+    .players-form {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+
+@media screen and (max-width: 39.9375em) {
+  .players-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    max-width: 100%; } }
+  @media screen and (max-width: 39.9375em) and (min-width: 40em) {
+    .players-form {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }

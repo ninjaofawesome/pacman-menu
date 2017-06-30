@@ -8,6 +8,8 @@ const pacman = (state =[], action) => {
           name: action.name
         }
       ]
+    case 'LIMIT_PLAYERS':
+      return state;
     default:
       return state;
   }

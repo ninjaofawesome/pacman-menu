@@ -1,0 +1,36 @@
+.players {
+  @include flex-grid-column(10);
+  display: block;
+  margin: 0 auto;
+
+  &__title {
+    @include CourierFlex(rem-calc(30), $lt-gray);
+
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__play-button {
+    @include CourierFlexBold(rem-calc(20), $white);
+
+    background-color: $red;
+    border: 0;
+    display: block;
+    margin: 0 auto;
+    padding: rem-calc(10);
+  }
+}
+
+.hide-list {
+  @include opacity(0, 350ms);
+}
+
+.show-list {
+  @include opacity(1, 350ms);
+}
+
+@include breakpoint(medium down) {
+  .players {
+     @include flex-grid-column(12);
+  }
+}
